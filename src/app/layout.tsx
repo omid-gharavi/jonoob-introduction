@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import '@/styles/globals.css'
+import localFont from 'next/font/local'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const IranYekan = localFont({
+  src: [
+    {
+      path: '../../public/fonts/iranyekan/iranyekanwebregular.woff2',
+      weight: '400',
+      style: 'regular'
+    }
+  ]
+})
 
 export const metadata: Metadata = {
-  title: "جنوب",
+  title: "جنوب ایران",
   description: "معرفی شهر های جنوب",
   icons: '/favicon.ico'
 };
@@ -25,8 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="fa"
+      dir="rtl"
+      className={`${IranYekan.className} min-h-dvh antialiased`}
     >
       <body className="min-h-dvh flex flex-col">{children}</body>
     </html>
