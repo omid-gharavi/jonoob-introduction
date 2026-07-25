@@ -22,7 +22,7 @@ export default function HeroImage() {
                 duration: 0.9,
                 ease: "easeOut",
             }}
-            className="absolute w-full h-screen left-0 top-0 bottom-10 -z-30"
+            className="absolute w-full h-dvh left-0 top-0 bottom-10 -z-30"
         >
             <div className="absolute size-full bg-black opacity-10 -z-10"></div>
             <Image
