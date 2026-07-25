@@ -7,8 +7,13 @@ const IranYekan = localFont({
     {
       path: '../../public/fonts/iranyekan/iranyekanwebregular.woff2',
       weight: '400',
-      style: 'regular'
-    }
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/iranyekan/iranyekanwebbold.woff2',
+      weight: '600',
+      style: 'normal'
+    },
   ]
 })
 
@@ -29,7 +34,10 @@ export default function RootLayout({
       dir="rtl"
       className={`${IranYekan.className} min-h-dvh antialiased`}
     >
-      <body className="min-h-dvh flex flex-col">{children}</body>
+      <body
+        className="min-h-dvh flex flex-col pt-8 px-48 max-lg:px-6 relative mx-auto max-w-desktop w-full">
+        {children}
+      </body>
     </html>
   );
 }

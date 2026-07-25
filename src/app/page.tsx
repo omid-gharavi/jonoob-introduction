@@ -1,11 +1,13 @@
 import Header from "@/components/shared/header/header";
 import HeroImage from "@/components/shared/header/hero-image";
+import HeroSection from "@/components/shared/hero-section/hero-section";
 
 export default function Home() {
   return (
-    <div className="relative mx-auto max-w-desktop w-full pt-8 px-16">
+    <div>
       <HeroImage />
       <Header />
+      <HeroSection />
     </div>
   );
 }

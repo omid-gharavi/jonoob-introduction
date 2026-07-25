@@ -22,15 +22,16 @@ export default function HeroImage() {
                 duration: 0.9,
                 ease: "easeOut",
             }}
-            className="absolute w-full h-screen left-0 top-0 bottom-10 -z-10"
+            className="absolute w-full h-screen left-0 top-0 bottom-10 -z-30"
         >
+            <div className="absolute size-full bg-black opacity-10 -z-10"></div>
             <Image
                 priority={true}
                 src={bandar_abas_ai}
                 width={1000}
                 height={1000}
                 alt="hero"
-                className="object-cover size-full"
+                className="relative object-cover size-full blur-[2.5px] -z-20"
                 onLoad={() => setLoaded(true)}
             />
         </motion.div>
