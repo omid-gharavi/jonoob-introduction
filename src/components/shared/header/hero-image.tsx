@@ -24,7 +24,7 @@ export default function HeroImage() {
             }}
             className="absolute w-full h-dvh left-0 top-0 bottom-10 -z-30"
         >
-            <div className="absolute size-full bg-black opacity-10 -z-10"></div>
+            <div className="absolute size-full bg-black opacity-35 -z-10"></div>
             <Image
                 priority={true}
                 src={bandar_abas_ai}
