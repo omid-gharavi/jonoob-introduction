@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
 export default function HeroSection() {
     return (
         <motion.div
-            className="mt-56 max-w-135 w-full max-md:text-center text-primary"
+            className="mt-56 max-w-135 w-full max-md:text-center text-white"
             initial={{
                 translateY: 50
             }}
