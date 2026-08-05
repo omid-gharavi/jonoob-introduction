@@ -5,8 +5,8 @@ import HeroSection from "@/components/shared/hero-section/hero-section";
 export default function Home() {
   return (
     <div>
-      <HeroImage />
       <Header />
+      <HeroImage />
       <HeroSection />
     </div>
   );
