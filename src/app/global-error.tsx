@@ -24,7 +24,7 @@ export default function GlobalError({ error, unstable_retry }: Props) {
                     }}
                     className="h-dvh flex flex-col items-center justify-center gap-4"
                 >
-                    <p className="text-2xl">مشکلی پیش آمده</p>
+                    <p className="text-2xl">خطا!</p>
                     <Button className={'p-5 rounded-2xl'} onClick={() => unstable_retry()}>دوباره امتحان کنید</Button>
                 </motion.div>
             </body>
