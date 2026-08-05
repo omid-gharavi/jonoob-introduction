@@ -1,18 +1,24 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import usePageLoaded from '@/hooks/usePageLoaded';
 import { motion } from 'motion/react';
 
 export default function HeroSection() {
+    const { pageLoaded } = usePageLoaded();
+
     return (
         <motion.div
             className="mt-56 max-w-135 w-full max-md:text-center text-white"
             initial={{
-                translateY: 50
+                opacity: 0,
+                y: 50
             }}
-            animate={{
-                translateY: 0
-            }}
+            animate={
+                pageLoaded
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 50 }
+            }
             transition={{
                 duration: 1,
                 ease: 'easeOut',
