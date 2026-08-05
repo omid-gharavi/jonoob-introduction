@@ -9,7 +9,7 @@ export default function HeroSection() {
 
     return (
         <motion.div
-            className="mt-56 max-w-135 w-full max-md:text-center text-white"
+            className="flex flex-col max-sm:items-center mt-56 max-w-135 w-full max-md:text-center text-white"
             initial={{
                 opacity: 0,
                 y: 50
@@ -23,13 +23,14 @@ export default function HeroSection() {
                 duration: 1,
                 ease: 'easeOut',
             }}>
-            <p className="text-5xl font-semibold max-md:text-3xl">شهر های جنوب ایران</p>
+            <p className="text-5xl font-semibold max-md:text-[35px]">شهر های جنوب ایران</p>
             <p className="mt-4 max-md:mt-3 leading-9 max-md:text-sm">
                 جایی که ایران باستان با روح گرم ساحلی تلاقی می‌کند. دریا را از شهرهای بندر و باغ‌ های شاعرانه تا جزایر رنگین‌ کمانی و دژهای کویری دنبال کنید.
             </p>
             <div className='flex items-center gap-6'>
                 <Button
                     className={'mt-5 px-4 h-10'}
+                    variant={'outline'}
                 >
                     جستو جوی شهرها
                 </Button>
