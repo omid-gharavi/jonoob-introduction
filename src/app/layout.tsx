@@ -38,7 +38,7 @@ export default function RootLayout({
       className={`${IranYekan.className} min-h-dvh antialiased`}
     >
       <body
-        className="min-h-dvh flex flex-col pt-8 px-48 max-lg:px-6 relative mx-auto max-w-desktop w-full">
+        className="min-h-dvh flex flex-col relative mx-auto max-w-desktop w-full fade-in">
         {children}
       </body>
     </html>

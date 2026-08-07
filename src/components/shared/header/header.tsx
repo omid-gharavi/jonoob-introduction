@@ -3,7 +3,7 @@ import { FaRegCompass } from "react-icons/fa";
 
 export default function Header() {
     return (
-        <header className="flex justify-between items-center text-white">
+        <header className="sticky top-0 pt-8 flex justify-between items-center text-white">
             <Link href='/' className="text-2xl flex items-center gap-2">
                 <FaRegCompass />
                 <p>جنوب</p>

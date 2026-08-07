@@ -51,7 +51,7 @@
 :root {
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
+    --card: #2a1f1a;
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
@@ -120,72 +120,95 @@
 @layer base {
   * {
       @apply border-border outline-ring/50;
-    }
+      scrollbar-color: var(--color-secondary) transparent;
+      scrollbar-width: thin;
+  }
+
+  *::-webkit-scrollbar {
+    @apply scroll-smooth;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
 
   body {
       @apply bg-background text-foreground;
-    }
+  }
 
   html {
       @apply font-sans;
-    }
+  }
 
   .loader {
     --color-1: #2B2B2B;
     --color-2:  --color-1: #000000;   --color-2: #8b4513;
     --size: 1.45px;
 
-  width: calc(48 * var(--size));
-  height: calc(48 * var(--size));
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  border: calc(3 * var(--size)) solid;
-  border-color: var(--color-1) var(--color-1) transparent transparent;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-}
-.loader::after,
-.loader::before {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border: calc(3 * var(--size)) solid;
-  border-color: transparent transparent var(--color-2) var(--color-2);
-  width: calc(40 * var(--size));
-  height: calc(40 * var(--size));
-  border-radius: 50%;
-  box-sizing: border-box;
-  animation: rotationBack 0.5s linear infinite;
-  transform-origin: center center;
-}
-.loader::before {
-  width: calc(32 * var(--size));
-  height: calc(32 * var(--size));
-  border-color: var(--color-1) var(--color-1) transparent transparent;
-  animation: rotation 1.5s linear infinite;
-}
+    width: calc(48 * var(--size));
+    height: calc(48 * var(--size));
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: calc(3 * var(--size)) solid;
+    border-color: var(--color-1) var(--color-1) transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: calc(3 * var(--size)) solid;
+    border-color: transparent transparent var(--color-2) var(--color-2);
+    width: calc(40 * var(--size));
+    height: calc(40 * var(--size));
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width: calc(32 * var(--size));
+    height: calc(32 * var(--size));
+    border-color: var(--color-1) var(--color-1) transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  100% {
-    transform: rotate(360deg);
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
   }
-}
-@keyframes rotationBack {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 
+  .fade-in{
+    opacity: 0;
+    animation: fadeIn 0.8s linear forwards;
+  }
+
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
 }
